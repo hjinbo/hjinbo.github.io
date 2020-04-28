@@ -1,14 +1,21 @@
 $(function() {
 
-	const playListId = 2179377798 // // 434963933
+	const defaultPlayListId = 434963933 // 2179377798 // 
 
-	play(playListId)
+	play()
+
+	function getUrlParam(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+		var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+		if (r != null) return unescape(r[2]); return null; //返回参数值
+	}
 
 	const getUrlById = (id) => {
 		return `https://music.163.com/song/media/outer/url?id=${id}.mp3`
 	}
 	
-	function play(playListId) {
+	function play() {
+		var playListId = getUrlParam('playListId') || defaultPlayListId
 		$.get('https://daiwei.site/netease/playlist/detail?id=' + playListId, function(res) {
 			let music = res.playlist.tracks
 			let index = Math.floor(Math.random() * music.length)
