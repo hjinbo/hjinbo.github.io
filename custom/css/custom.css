@@ -4,6 +4,10 @@
 #page-header.not-home-page {
     background: 0 0;
 }
+/* 调整主页背景图过暗 */
+#page-header:not(.not-top-img):before {
+    background-color: rgb(0 0 0 / 0%);
+}
 [data-theme=dark] #footer::before {
     background: 0 0!important;
 }
