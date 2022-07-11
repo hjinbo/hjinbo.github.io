@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="2022/04/18/hello-world/"/>
+      <url>2022/04/18/hello-world/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>动画分享</title>
+      <link href="2022/04/05/%E5%8A%A8%E7%94%BB%E5%88%86%E4%BA%AB/"/>
+      <url>2022/04/05/%E5%8A%A8%E7%94%BB%E5%88%86%E4%BA%AB/</url>
+      
+        <content type="html"><![CDATA[<p>前段时间在听音乐时听到这首歌，似乎听过，觉得不错多听了几遍，或许你也会觉得好听呢</p><div class="video-container"><iframe src=https://mov.bn.netease.com/open-movie/nos/mp4/2019/03/27/SEAC2UQOL_shd.mp4 frameborder=0 allow=encrypted-media allowfullscreen ></iframe></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 音乐 </tag>
+            
+            <tag> 动画 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo使用aplayer的坑</title>
+      <link href="2021/09/19/hexo%E4%BD%BF%E7%94%A8aplayer%E7%9A%84%E5%9D%91/"/>
+      <url>2021/09/19/hexo%E4%BD%BF%E7%94%A8aplayer%E7%9A%84%E5%9D%91/</url>
+      
+        <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ul><li>由于想加入一些自定义的js和css文件，根据建议，自定义的文件最好不要放在相应主题的目录下，于是将其放在hexo下新建的source目录中。</li></ul><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul><li>自定义的文件用配置的方式注入后，发现js和css内容开头都被加入了一段有关aplayer的标签。</li></ul><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><ul><li>其实并非一定要使用hexo-tag-aplayer标签，在尝试了官方文档给出对于重复加载资源文件的解决方法不生效后，于是<strong>直接将此插件卸载</strong>，重新运行后发现自定义的js和css内容开头都没有关于aplayer的标签了。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> aplayer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>主题更换</title>
+      <link href="2021/04/29/themeChange/"/>
+      <url>2021/04/29/themeChange/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>好久没有更新文章内容了，最近看到其他其他博客中的一个全局音乐播放器(站内的页面切换不中断播放)体验很不错，于是在上一个主题的基础上开始倒腾全局的音乐播放器。</p><h2 id="障碍"><a href="#障碍" class="headerlink" title="障碍"></a>障碍</h2><p>自己瞎试了很多方法都不行，然后网上一搜了解到一个叫pjax的东西，于是参考教程使用，但是发现在icarus主题下要改动挺多的，例如</p><ul><li>页面布局(套一个div区分开音乐播放器，只刷新div内的)</li><li>由于pjax不会每次都加载js，所以还要自己写一个js用来重新加载原页面中的js</li></ul><p>最后实现和存在问题</p><ul><li>评论系统valine有时不好使了(看其他博客中有写到说在valine配置中显式增加path: window.location.pathname)</li><li>由于js要重新加载，导致页面切换的动画不好看(已切换页面动画后加载)</li></ul><p>总之改着心里也没底。</p><h2 id="眼前一亮"><a href="#眼前一亮" class="headerlink" title="眼前一亮"></a>眼前一亮</h2><p>在翻阅各种博客后，终于看到了现在应用的主题–butterfly；到github上一搜特点，支持pjax(通过配置文件开关该插件)，valine，justified-gallery，当然还有aplayer，于是开始着手更换。</p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>butterfly主题官方文档写的很详细，几乎所有我想要的功能都可以通过配置文件实现，不需要改动主题源码，嗯，感觉就很不错。站内音乐不中断的感觉真好。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+          <category> 主题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Make a Decision</title>
+      <link href="2020/04/23/MakeADecision/"/>
+      <url>2020/04/23/MakeADecision/</url>
+      
+        <content type="html"><![CDATA[<h2 id="What"><a href="#What" class="headerlink" title="What"></a>What</h2><p>I am not sure.</p><h2 id="when"><a href="#when" class="headerlink" title="when"></a>when</h2><p>Maybe three or four days ago.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>6步!使用Hexo搭建自己的主页</title>
+      <link href="2020/04/17/Hexo/"/>
+      <url>2020/04/17/Hexo/</url>
+      
+        <content type="html"><![CDATA[<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol><li>安装nodejs</li><li>运行命令 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li><li>初始化helloworld工程 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init helloworld</span><br></pre></td></tr></table></figure><span id="more"></span></li><li>进入工程目录安装依赖 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd helloworld</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></li><li>启动服务 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li><li>浏览器访问localhost:4000</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

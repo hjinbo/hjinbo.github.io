@@ -1,0 +1,13 @@
+#footer {
+    background: 0 0!important;
+}
+#page-header.not-home-page {
+    background: 0 0;
+}
+[data-theme=dark] #footer::before {
+    background: 0 0!important;
+}
+/* 调整bibi页的时间样式 */
+div.timenode .meta p {
+    margin: 0 0 0 24px !important;
+}
