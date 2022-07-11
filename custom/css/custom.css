@@ -8,6 +8,9 @@
 #page-header:not(.not-top-img):before {
     background-color: transparent;
 }
+[data-theme='dark'] #page-header:before {
+    background-color: rgba(0,0,0,0.7);
+}
 [data-theme=dark] #footer::before {
     background: 0 0!important;
 }
