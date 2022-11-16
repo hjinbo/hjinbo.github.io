@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>n后问题-分支限界法</title>
+      <link href="2022/11/16/n%E5%90%8E%E9%97%AE%E9%A2%98-%E5%88%86%E6%94%AF%E9%99%90%E7%95%8C%E6%B3%95/"/>
+      <url>2022/11/16/n%E5%90%8E%E9%97%AE%E9%A2%98-%E5%88%86%E6%94%AF%E9%99%90%E7%95%8C%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="前提说明"><a href="#前提说明" class="headerlink" title="前提说明"></a>前提说明</h3><ul><li>最近算法课有道作业题要求用分支限界法求解n皇后问题，想网上搜题解，苦于大多是挂羊头卖狗肉的，遂想了这个方法，并记录下来。</li><li>该方法与回溯解法有相似之处。</li></ul><h3 id="思路说明"><a href="#思路说明" class="headerlink" title="思路说明"></a>思路说明</h3><ul><li>分支限界法采用广度优先搜索解空间树，通常会用到一个辅助队列(<em>有优先级</em>)；本题解中辅助队列存放元组(行, 列)，按照行大优先，相同行，列小优先，列小优先不需要重新设置，因为入队时按此顺序入队，初始时先将首行元素全部入队(因为首行位置均可放置)，只要队列非空就选取队首元素作为扩展结点出队，若出队元素行到最末则表示找到解了，函数返回，否则将与之相连的有效(可放置)子结点入队，直到队列为空，表示问题无解。</li></ul><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><pre><code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sort</span>(<span class="params">a</span>):</span></span><br><span class="line">    b = <span class="built_in">sorted</span>(a, key = <span class="keyword">lambda</span> t : t[<span class="number">0</span>], reverse = <span class="literal">True</span>)</span><br><span class="line">    a[:] = b[:]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">place</span>(<span class="params">k, x</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(k):</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">abs</span>(i - k) == <span class="built_in">abs</span>(x[i] - x[k]) <span class="keyword">or</span> x[i] == x[k]: <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nQueen</span>(<span class="params">n, x</span>):</span></span><br><span class="line">    queue = []</span><br><span class="line">    <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        queue.append((<span class="number">0</span>, col))</span><br><span class="line">    <span class="keyword">while</span> <span class="built_in">len</span>(queue) &gt; <span class="number">0</span>:</span><br><span class="line">        firstElem = queue.pop(<span class="number">0</span>)</span><br><span class="line">        x[firstElem[<span class="number">0</span>]] = firstElem[<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">if</span> (firstElem[<span class="number">0</span>] == n - <span class="number">1</span>):</span><br><span class="line">            <span class="built_in">print</span>(x)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="comment"># 将其有效子结点入队</span></span><br><span class="line">        <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            x[firstElem[<span class="number">0</span>] + <span class="number">1</span>] = col</span><br><span class="line">            <span class="keyword">if</span> place(firstElem[<span class="number">0</span>] + <span class="number">1</span>, x):</span><br><span class="line">                queue.append((firstElem[<span class="number">0</span>] + <span class="number">1</span>, col))</span><br><span class="line">        sort(queue)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></code></pre><h3 id="进一步优化"><a href="#进一步优化" class="headerlink" title="进一步优化"></a>进一步优化</h3><ul><li>上述代码为图方便，在实现优先队列时每次均采用排序达到效果，一种较之更好的方式是可以直接使用python库queue中的PriorityQueue，时间复杂度会有提升。</li></ul><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul><li>在选择扩展结点的时候，每次都是尽可能的选择结点的左孩子(如果存在)，可见与回溯法搜索流程十分相似。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 分支限界法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>动画分享</title>
       <link href="2022/04/05/%E5%8A%A8%E7%94%BB%E5%88%86%E4%BA%AB/"/>
       <url>2022/04/05/%E5%8A%A8%E7%94%BB%E5%88%86%E4%BA%AB/</url>
