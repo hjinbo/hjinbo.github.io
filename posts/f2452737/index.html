@@ -1,17 +1,17 @@
 <!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>n后问题-分支限界法 | nevermore</title><meta name="keywords" content="分支限界法"><meta name="author" content="nevermore"><meta name="copyright" content="nevermore"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前提说明 最近算法课有道作业题要求用分支限界法求解n皇后问题，想网上搜题解，苦于大多是挂羊头卖狗肉的，遂想了这个方法，并记录下来。 该方法与回溯解法有相似之处。  思路说明 分支限界法采用广度优先搜索解空间树，通常会用到一个辅助队列(有优先级)；本题解中辅助队列存放元组(行, 列)，按照行大优先，相同行，列小优先，列小优先不需要重新设置，因为入队时按此顺序入队，初始时先将首行元素全部入队(因为首行">
 <meta property="og:type" content="article">
 <meta property="og:title" content="n后问题-分支限界法">
-<meta property="og:url" content="http://yoursite.com/posts/f2452737/index.html">
+<meta property="og:url" content="https://yoursite.com/posts/f2452737/index.html">
 <meta property="og:site_name" content="nevermore">
 <meta property="og:description" content="前提说明 最近算法课有道作业题要求用分支限界法求解n皇后问题，想网上搜题解，苦于大多是挂羊头卖狗肉的，遂想了这个方法，并记录下来。 该方法与回溯解法有相似之处。  思路说明 分支限界法采用广度优先搜索解空间树，通常会用到一个辅助队列(有优先级)；本题解中辅助队列存放元组(行, 列)，按照行大优先，相同行，列小优先，列小优先不需要重新设置，因为入队时按此顺序入队，初始时先将首行元素全部入队(因为首行">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/static/cover/n%E7%9A%87%E5%90%8E.png">
+<meta property="og:image" content="https://yoursite.com/static/cover/n%E7%9A%87%E5%90%8E.png">
 <meta property="article:published_time" content="2022-11-16T01:54:39.000Z">
 <meta property="article:modified_time" content="2022-11-17T07:47:03.901Z">
 <meta property="article:author" content="nevermore">
 <meta property="article:tag" content="分支限界法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/static/cover/n%E7%9A%87%E5%90%8E.png"><link rel="shortcut icon" href="/static/pic/yellow.png"><link rel="canonical" href="http://yoursite.com/posts/f2452737/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><meta name="baidu-site-verification" content="code-DELzdyvtuF"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://yoursite.com/static/cover/n%E7%9A%87%E5%90%8E.png"><link rel="shortcut icon" href="/static/pic/yellow.png"><link rel="canonical" href="https://yoursite.com/posts/f2452737/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><meta name="baidu-site-verification" content="code-DELzdyvtuF"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
