@@ -1,7 +1,5 @@
-var img = new Image();
-img.src = "/static/pic/snow.png";
-
-var drawNum = 20;
+var snowImg = new Image();
+snowImg.src = "/static/pic/snow.png";
 
 function Snow(x, y, s, r, fn) {
     this.x = x;
@@ -15,7 +13,7 @@ Snow.prototype.draw = function(cxt) {
     cxt.save();
     cxt.translate(this.x, this.y);
     cxt.rotate(this.r);
-    cxt.drawImage(img, 0, 0, 35 * this.s, 35 * this.s)
+    cxt.drawImage(snowImg, 0, 0, 35 * this.s, 35 * this.s)
     cxt.restore();
 }
 
@@ -102,7 +100,8 @@ function getRandom(option) {
     return ret;
 }
 
-function startSnow() {
+function startSnow(drawNum) {
+    if (!drawNum) drawNum = 20; // 如果没传绘制数量默认20
     requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
     var canvas = document.createElement('canvas'), cxt;
     canvas.height = window.innerHeight;
@@ -136,4 +135,18 @@ function startSnow() {
         stop = requestAnimationFrame(arguments.callee);
     })
 }
-window.addEventListener("DOMContentLoaded", startSnow);
+function stopSnow(e) {
+    if (!e && document.getElementById("canvas_snow")) {
+        var child = document.getElementById("canvas_snow");
+        child.parentNode.removeChild(child);
+        window.cancelAnimationFrame(stop);
+    } else if (e && !document.getElementById("canvas_snow")) {
+        startSnow();
+    }
+}
+// window.addEventListener("DOMContentLoaded", startSnow);
+
+var d = localStorage.getItem('bgEffect');
+if (d == 0) {
+    startSnow();
+}

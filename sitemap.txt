@@ -1,3 +1,5 @@
+https://hjinbo1.gitee.io/photos/gallery/cover/index.html
+https://hjinbo1.gitee.io/settings/index.html
 https://hjinbo1.gitee.io/posts/ad250471/
 https://hjinbo1.gitee.io/posts/64e8e8e/
 https://hjinbo1.gitee.io/posts/ee834169/
@@ -6,7 +8,6 @@ https://hjinbo1.gitee.io/posts/8b8f7b61/
 https://hjinbo1.gitee.io/posts/c9bf2010/
 https://hjinbo1.gitee.io/photos/gallery/life/index.html
 https://hjinbo1.gitee.io/photos/gallery/others/index.html
-https://hjinbo1.gitee.io/photos/gallery/cover/index.html
 https://hjinbo1.gitee.io/photos/index.html
 https://hjinbo1.gitee.io/tags/index.html
 https://hjinbo1.gitee.io/games/index.html
