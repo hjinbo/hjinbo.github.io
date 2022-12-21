@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>增加博客设置页</title>
+      <link href="/posts/498ed0b/"/>
+      <url>/posts/498ed0b/</url>
+      
+        <content type="html"><![CDATA[<p>回家前得一段时间比较闲(主要是游戏玩得有点腻)，便开始倒腾一下博客了;<br>由于短期更新内容有点小多，于是写一篇来记录下(又可以水一篇&#x1f92a;);</p><h3 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h3><ul><li>增加<a href="/settings">设置页</a><ul><li>增加背景雪花效果控制</li><li>增加背景雨滴效果控制</li><li>调整音乐源的切换效果<ul><li>以前是浏览器地址栏输入参数，现在可以通过按钮进行切换了</li><li>增加了本地音乐源</li></ul></li><li>增加鼠标指针样式切换</li></ul></li><li>增加相册中的<a href="/photos/gallery/cover">壁纸</a>切换功能</li></ul><p>以上更新内容重新打开网页效果仍然会保留;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设置 </tag>
+            
+            <tag> 特效 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>n后问题-分支限界法</title>
       <link href="/posts/f2452737/"/>
       <url>/posts/f2452737/</url>

@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hjinbo1.gitee.io/photos/gallery/cover/index.html</loc>
+    
+    <lastmod>2022-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hjinbo1.gitee.io/posts/498ed0b/</loc>
+    
+    <lastmod>2022-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hjinbo1.gitee.io/settings/index.html</loc>
     
     <lastmod>2022-12-21</lastmod>
@@ -23,15 +41,6 @@
     <loc>https://hjinbo1.gitee.io/static/music/localMusic.json</loc>
     
     <lastmod>2022-12-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hjinbo1.gitee.io/photos/gallery/cover/index.html</loc>
-    
-    <lastmod>2022-12-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -200,6 +209,20 @@
   
   <url>
     <loc>https://hjinbo1.gitee.io/tags/%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2022-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hjinbo1.gitee.io/tags/%E8%AE%BE%E7%BD%AE/</loc>
+    <lastmod>2022-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hjinbo1.gitee.io/tags/%E7%89%B9%E6%95%88/</loc>
     <lastmod>2022-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
