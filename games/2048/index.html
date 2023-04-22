@@ -18,46 +18,47 @@
     <script type="text/javascript" src="layui/layui.all.js"></script>
 </head>
 <body>
-
-    <div class="btn-back">
-        <div class="score">
-            <span>SCORE</span>
-            <span id="score">0</span>
+    <div id="global-div">
+        <div class="btn-back">
+            <div class="score">
+                <span>SCORE</span>
+                <span id="score">0</span>
+            </div>
+            <div class="best">
+                <span>BEST</span>
+                <span id="best">0</span>
+            </div>
         </div>
-        <div class="best">
-            <span>BEST</span>
-            <span id="best">0</span>
+        <div class="mid">
+            <div id="new-game">
+                <a id="reset">NEW GAME</a>
+            </div>
+            <span class="music">🎶</span>
         </div>
-    </div>
-    <div class="mid">
-        <div id="new-game">
-            <a id="reset">NEW GAME</a>
+        <div class="board-back">
+            <!--写16个div-->
+            <div class="chessman" id="0-0"></div>
+            <div class="chessman" id="0-1"></div>
+            <div class="chessman" id="0-2"></div>
+            <div class="chessman" id="0-3"></div>
+
+            <div class="chessman" id="1-0"></div>
+            <div class="chessman" id="1-1"></div>
+            <div class="chessman" id="1-2"></div>
+            <div class="chessman" id="1-3"></div>
+
+            <div class="chessman" id="2-0"></div>
+            <div class="chessman" id="2-1"></div>
+            <div class="chessman" id="2-2"></div>
+            <div class="chessman" id="2-3"></div>
+
+            <div class="chessman" id="3-0"></div>
+            <div class="chessman" id="3-1"></div>
+            <div class="chessman" id="3-2"></div>
+            <div class="chessman" id="3-3"></div>
         </div>
-        <span class="music">🎶</span>
-    </div>
-    <div class="board-back">
-        <!--写16个div-->
-        <div class="chessman" id="0-0"></div>
-        <div class="chessman" id="0-1"></div>
-        <div class="chessman" id="0-2"></div>
-        <div class="chessman" id="0-3"></div>
-
-        <div class="chessman" id="1-0"></div>
-        <div class="chessman" id="1-1"></div>
-        <div class="chessman" id="1-2"></div>
-        <div class="chessman" id="1-3"></div>
-
-        <div class="chessman" id="2-0"></div>
-        <div class="chessman" id="2-1"></div>
-        <div class="chessman" id="2-2"></div>
-        <div class="chessman" id="2-3"></div>
-
-        <div class="chessman" id="3-0"></div>
-        <div class="chessman" id="3-1"></div>
-        <div class="chessman" id="3-2"></div>
-        <div class="chessman" id="3-3"></div>
+        <div id="tip" title="hey! you find me!"><span>provided by Nevermore</span></div>
     </div>
     <audio id="bgMusic" src="music/For%20You.mp3" hidden="true" loop="loop"></audio>
-<div id="tip" title="hey! you find me!"><span>provided by Nevermore</span></div>
 </body>
 </html>

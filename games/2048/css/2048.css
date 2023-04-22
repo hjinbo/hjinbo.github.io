@@ -1,12 +1,16 @@
 body {
     background: #faf8ef;
 }
+#global-div {
+    margin: 0 auto;
+    width: 440px;
+}
 .board-back {
     width: 428px;
     height: 428px;
     background-color: #bbada0;
     padding: 5px;
-    margin-left: 450px;
+    /* margin-left: 450px; */
     margin-top: 20px;
     border-radius: 5px;
 }
@@ -37,7 +41,7 @@ body {
     background-color: #bbada0;
     border-radius: 5px;
     padding: 5px;
-    margin-left: 450px;
+    /* margin-left: 450px; */
     text-align: center;
 }
 
@@ -80,15 +84,15 @@ body {
 .chessman span {
     line-height: 96px;
     font-size: xx-large;
-    font-family: fantasy; // -webkit-pictograph
+    font-family: fantasy; /* -webkit-pictograph*/
     font-variant-numeric: oldstyle-nums;
-    color: mintcream; // #776e65
+    color: mintcream; /* #776e65 */
 }
 
 .mid {
     width: 428px;
     height: 20px;
-    margin-left: 450px;
+    /* margin-left: 450px; */
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px;
