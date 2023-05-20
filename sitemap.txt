@@ -1,7 +1,7 @@
+https://hjinbo1.gitee.io/static/music/localMusic.json
 https://hjinbo1.gitee.io/photos/gallery/life/index.html
 https://hjinbo1.gitee.io/photos/index.html
 https://hjinbo1.gitee.io/photos/gallery/cover/index.html
-https://hjinbo1.gitee.io/static/music/localMusic.json
 https://hjinbo1.gitee.io/posts/498ed0b/
 https://hjinbo1.gitee.io/settings/index.html
 https://hjinbo1.gitee.io/posts/ad250471/
