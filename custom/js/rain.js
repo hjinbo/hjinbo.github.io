@@ -10,7 +10,7 @@ function Rain(x, y, fn) {
 Rain.prototype.draw = function(cxt) {
     cxt.save();
     cxt.translate(this.x, this.y);
-    cxt.rotate(-0.6);
+    cxt.rotate(-0.7);
     cxt.drawImage(rainImg, 0, 0, 40, 40)
     cxt.restore();
 }
@@ -69,7 +69,7 @@ function getRainRandom(option) {
         ;
         break;
     case 'fny':
-        yOffset = 4.8;
+        yOffset = 20;
         ret = function(x, y) {
             return y + yOffset;
         }
