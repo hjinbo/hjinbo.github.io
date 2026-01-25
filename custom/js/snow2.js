@@ -112,24 +112,24 @@ function loop(timestamp) {
 }
 
 function startSnow2(options) {
-		var defaults = {     
-			//创建粒子数量，密度
-			particleNo: 300,
-			//粒子下拉速度
-			particleSpeed:30,
-			//粒子在垂直（Y轴）方向运动范围
-			particleY_Range:1300,
-			//粒子在垂直（X轴）方向运动范围
-			particleX_Range:1000,
-			//是否绑定鼠标事件
-			bindMouse: false,
-			//相机离Z轴原点距离
-			zIndex:600,
-			//风力强度，正值向右，负值向左
-			wind_weight:-1,
-			//摄像机视野角度
-			angle:55
-		};     
+	var defaults = {     
+		//创建粒子数量，密度
+		particleNo: 300,
+		//粒子下拉速度
+		particleSpeed:30,
+		//粒子在垂直（Y轴）方向运动范围
+		particleY_Range:1300,
+		//粒子在垂直（X轴）方向运动范围
+		particleX_Range:1000,
+		//是否绑定鼠标事件
+		bindMouse: false,
+		//相机离Z轴原点距离
+		zIndex:600,
+		//风力强度，正值向右，负值向左
+		wind_weight:-1,
+		//摄像机视野角度
+		angle:55
+	};     
 	var opts = options || defaults;
 	
 	particleY_Range=opts.particleY_Range;
@@ -141,8 +141,8 @@ function startSnow2(options) {
 	container.setAttribute('id', 'snow2-div');
 	container.setAttribute('style', 'position: fixed;left: 0;top: 0;pointer-events: none;');
 	document.body.appendChild(container);
-//		透视相机，物体大小随距离摄像机远近改变，对比投影相机
-//		相机的上方向为Y轴，右方向为X轴，沿着Z轴垂直朝里（视野角：fov； 纵横比：aspect； 相机离视最近的距离：near； 相机离视体积最远距离：far）
+	//透视相机，物体大小随距离摄像机远近改变，对比投影相机
+	//相机的上方向为Y轴，右方向为X轴，沿着Z轴垂直朝里（视野角：fov； 纵横比：aspect； 相机离视最近的距离：near； 相机离视体积最远距离：far）
 	camera = new THREE.PerspectiveCamera( opts.angle, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
 	//设置摄像机z坐标位置距离原点向外距离
 	camera.position.z = opts.zIndex;

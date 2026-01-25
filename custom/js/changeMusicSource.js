@@ -2,6 +2,7 @@
 var musicSource = [
     ['#', '#'],
     ['tencent', '8111690820'],
+    ['tencent', '9652908114'],
     ['netease', '6805826295']
 ];
 
