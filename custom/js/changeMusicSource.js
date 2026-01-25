@@ -2,8 +2,8 @@
 var musicSource = [
     ['#', '#'],
     ['tencent', '8111690820'],
-    ['tencent', '9652908114'],
-    ['netease', '6805826295']
+    ['netease', '6805826295'],
+    ['tencent', '9652908114']
 ];
 
 // flag表示若localStroage中存在音乐源还是否更新
@@ -17,7 +17,7 @@ function setMusicParams(d, flag) {
         dataServer = params[1];
         dataId = params[2];
         if (flag) { // 更新localStorage中的音乐源
-            type = (type + 1) % musicSource.length;
+            type = (parseInt(type) + 1) % musicSource.length;
             dataServer = musicSource[type][0];
             dataId = musicSource[type][1];
         }
