@@ -1,6 +1,6 @@
 // 为什么这个变量不放入json文件中，因为多了文件读取这一步，meting.js请求就会先于本js，导致获取不到服务器音乐数据
 var musicSource = [
-    ['#', '#'],
+    ['#', '#'], // 本地音乐占位
     ['tencent', '8111690820'],
     ['netease', '6805826295'],
     ['tencent', '9652908114']
@@ -8,7 +8,7 @@ var musicSource = [
 
 // flag表示若localStroage中存在音乐源还是否更新
 function setMusicParams(d, flag) {
-    var type = 2;
+    var type = 0;
     var dataServer = musicSource[type][0];
     var dataId = musicSource[type][1];
     if (d) {
@@ -49,12 +49,21 @@ function selfHostedPlayer() {
     fetch('/static/music/localMusic.json') // 从json文件中获取
         .then((response) => response.json())
         .then((json) => {
+            // 20260130 为简化localMusic.json中字段，只保留歌曲名称和演唱者，其他字段自动生成
+            var localMusicList = json.localMusicList
+            const staticPath = '/static/music/'
+            for (i = 0; i < localMusicList.length; i++) {
+                localMusic = localMusicList[i]
+                localMusic['url'] = staticPath + 'url/' + localMusic['name'] + '-' + localMusic['artist'] + '.mp3';
+                localMusic['cover'] = staticPath + 'cover/' + localMusic['name'] + '-' + localMusic['artist'] + '.png';
+                localMusic['lrc'] = staticPath + 'lrc/' + localMusic['name'] + '-' + localMusic['artist'] + '.lrc';
+            }
             const ap = new APlayer({
                 container: document.getElementById('aplayer'),
                 fixed: true,
                 listFolded: false,
                 lrcType: 3,
-                audio: json.localMusicList
+                audio: localMusicList
             });
         });
 }
